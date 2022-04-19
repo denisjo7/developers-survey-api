@@ -44,7 +44,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no email is provided', () => {
-    // sut = system under test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -61,7 +60,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no password is provided', () => {
-    // sut = system under test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -78,7 +76,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no password confirmation is provided', () => {
-    // sut = system under test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -95,7 +92,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if an invalid email is provided', () => {
-    // sut = system under test
     const { sut, emailValidatorStub } = makeSut()
 
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
